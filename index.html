@@ -15,11 +15,12 @@
 
     h1 {
       color: #222;
+      margin-bottom: 10px;
     }
 
     p {
       max-width: 600px;
-      margin: 10px auto;
+      margin: 0 auto 20px;
       color: #444;
       line-height: 1.6;
     }
@@ -40,7 +41,8 @@
       font-size: 16px;
       border-radius: 10px;
       cursor: pointer;
-      margin-top: 15px;
+      margin-top: 20px;
+      transition: background 0.3s ease;
     }
 
     button:hover {
@@ -58,7 +60,10 @@
   </p>
 
   <!-- Фото -->
-  <img src="https://drive.google.com/uc?export=view&id=18I8ToHkbpgT339r0i8AnAsabLODfM89G" alt="Домбыра суреті">
+  <img 
+    src="https://drive.google.com/uc?export=view&id=18I8ToHkbpgT339r0i8AnAsabLODfM89G" 
+    alt="Домбыра суреті"
+  >
 
   <!-- ҮНІ батырмасы -->
   <div>
@@ -66,11 +71,15 @@
   </div>
 
   <!-- Аудио -->
-  <audio id="dombyraSound" src="https://docs.google.com/uc?export=open&id=1SdTR5grgdsaLRzh6SxK5ztBPyGt4K3vD"></audio>
+  <audio 
+    id="dombyraSound" 
+    src="https://docs.google.com/uc?export=open&id=1SdTR5grgdsaLRzh6SxK5ztBPyGt4K3vD">
+  </audio>
 
   <script>
     function playDombyra() {
       const sound = document.getElementById('dombyraSound');
+      sound.currentTime = 0; // әр басқанда басынан бастайды
       sound.play();
     }
   </script>
